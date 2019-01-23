@@ -24,10 +24,10 @@ function love.keyreleased(key)
     if key == "return" then
        size = size + 1
        r,g,b = colorList(size)
-       text = "hello "..size.." "..r..","..g..","..b
        x = 10 + 15 * math.fmod((size - 1),50)
        y = 80 + 85 * math.modf((size - 1) / 50 )
        h = 5
+       text = "hello "..x.." "..y
        table.insert(rectangles,{x,y,h,r,g,b})
     end
  end
